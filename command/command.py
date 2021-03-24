@@ -1,6 +1,7 @@
 import os
 import shutil
 import subprocess
+import json
 
 def pwd():
     print(os.getcwd())
@@ -54,8 +55,15 @@ def cp(file_list):
 def mv(file_list):
     return shutil.move(file_list[0], file_list[1])
 
-def _help(command=None):
-    pass
+def _help(command_name=None):
+    file_path = os.path.abspath('help.json')
+    with open (file_path) as f:
+        data = json.load(f)
+        if command_name is None:
+            print(data)
+
+    if command_name is not None:
+        print(data[''.join(command_name)])
 
 def create_file(name):
     file_name = ''.join(name)
@@ -97,8 +105,6 @@ def re_upload_git(comment_file):
 
 def create_requirement_txt():
     subprocess.run('pip freeze > requirement.txt', shell=True)
-
-os.chdir(os.path.expanduser("~/Desktop"))
 
 while True:
     enter_command = input(f'{os.getcwd()} ').split(' | ')

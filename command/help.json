@@ -1,0 +1,21 @@
+{
+    "pwd": "print work dir",
+    "make_dir": "make new dir. make_dir | test create new test dir",
+    "make_many_dir": "make many dirs. make_many_dir | test | test1 create test and in test dir create test1 dir",
+    "remove_dir": "remove dir. remove_dir | test remove test dir. remove_dir | test | all remove not empty dir",
+    "where_file": "return file path where_file | test.txt return file path",
+    "change_dir": "change work dir",
+    "ls": "print all files and dirs in current dir",
+    "rename_file": "rename file name first argument current file name second argument new file name",
+    "about_file": "see more info about file for example size",
+    "home_dir": "go in desktop dir",
+    "cp": "copy file first argument filename second argument destination path",
+    "mv": "move file first argument filename second argument destination path",
+    "create_file": "create new file required argument filename and file type for example create_file | test.txt",
+    "remove_file": "remove file required argument filename and file type for example remove_file | test.txt",
+    "read_file": "read file required argument filename and file type for example read_file | test.txt",
+    "write_file": "write file first argument filename second argument a for append in file w for write in file last argument text",
+    "upload_git": "upload project in github first argument repo link, socond argument repo comment, last argument files in order to upload all file write . command",
+    "re_upload_git": "reupload project in github if .git file is in current dir first argument comment second argument files in order to upload all file write . command",
+    "create_requirement_txt": "create requirement.txt file for python"
+}
