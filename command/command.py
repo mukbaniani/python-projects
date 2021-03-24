@@ -90,8 +90,9 @@ def upload_git(link_comment_file):
     subprocess.run("git push -u origin main", shell=True)
 
 def re_upload_git(comment_file):
+    comment = comment_file[0]
     subprocess.run(f'git add {comment_file[1]}', shell=True)
-    subprocess.run(f"git commit -m  '{comment_file[0]}' ", shell=True)
+    subprocess.run(f"git commit -m  '{comment}' ", shell=True)
     subprocess.run('git push -u origin main', shell=True)
 
 def create_requirement_txt():
